@@ -1,0 +1,22 @@
+.message-container {
+  display: flex;
+  padding: 5px;
+  transition: all .2s;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+}
+
+.user {
+  font-size: 90%;
+  font-weight: 700;
+  margin-right: 10px;
+  opacity: .7;
+}
+
+.message {
+  text-align: right;
+  flex: 1;
+}
+

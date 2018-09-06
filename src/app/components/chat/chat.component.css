@@ -1,0 +1,5 @@
+.message-container {
+  height: calc(100vh - 150px);
+  width: 100%;
+  margin-top: 15px;
+}

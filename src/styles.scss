@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+	border: 1px solid #aaa;
+	border-radius: 0;
+	background-color: #fff;
+	font-family: inherit;
+	color: inherit;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+button:hover {
+	border-color: #666;
+}
+
+button:active {
+	transform: translateY(1px);
+}
+
+.flex-box {
+	display: flex;
+
+	& > *:not(:last-child) {
+		margin-right: 20px;
+	}
+}
+
+input {
+	font-family: inherit;
+  color: inherit;
+  padding: 10px 20px;
+  font-style: 17px;
+}

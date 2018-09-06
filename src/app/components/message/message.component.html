@@ -1,0 +1,4 @@
+<div class="message-container">
+  <span class="user" [ngClass]="{'own': user === message.user}">{{ message.user }}</span>
+  <span class="message">{{ message.message }}</span>
+</div>
