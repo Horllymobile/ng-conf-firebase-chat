@@ -29,7 +29,7 @@ export class InputComponent implements OnInit {
         message: message,
         user: this.userAuth,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
-      };
+      } as any;
       console.log('messgeToSend:', messgeToSend);
       this.chat.addMessage(messgeToSend);
     }
