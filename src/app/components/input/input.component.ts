@@ -1,5 +1,5 @@
 import { Message } from './../../models/message.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import * as firebase from 'firebase';
 
 import { ChatService } from '../../services/chat.service';
@@ -11,6 +11,7 @@ import { ChatService } from '../../services/chat.service';
 })
 export class InputComponent implements OnInit {
   @Input() userAuth: string;
+  @ViewChild('chatMessage') input: ElementRef;
 
   constructor(private chat: ChatService) { }
 
@@ -18,9 +19,9 @@ export class InputComponent implements OnInit {
   }
 
   sendOnEnter(event: KeyboardEvent): void {
-    // if (event.keyCode === 13) {
-
-    // }
+    if (event.keyCode === 13) {
+      this.sendMessage(this.input.nativeElement.value);
+    }
   }
 
   sendMessage(message: string): void {

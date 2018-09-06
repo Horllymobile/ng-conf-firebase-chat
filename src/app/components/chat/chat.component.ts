@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+
 import { Message } from '../../models/message.model';
 
 @Component({
@@ -18,9 +18,6 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.messagesCollection = this.store.collection<Message>('messages', ref => ref.orderBy('timestamp'));
-    this.messages = this.messagesCollection
-      .valueChanges()
-      .pipe(tap(console.log));
-    this.messages.subscribe();
+    this.messages = this.messagesCollection.valueChanges();
   }
 }
