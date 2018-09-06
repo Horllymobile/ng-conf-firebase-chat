@@ -1,4 +1,4 @@
 <div class="input-container">
-  <input #chatMessage name="chat-msg" type="text" placeholder="Type your message" (keypress)=sendOnEnter()>
+  <input #chatMessage name="chat-msg" type="text" placeholder="Type your message" (keypress)=sendOnEnter($event)>
   <button (click)="sendMessage(chatMessage.value); chatMessage.value = ''">Post</button>
 </div>
