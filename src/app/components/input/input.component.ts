@@ -31,8 +31,8 @@ export class InputComponent implements OnInit {
         user: this.userAuth,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       } as any;
-      console.log('messgeToSend:', messgeToSend);
       this.chat.addMessage(messgeToSend);
+      this.input.nativeElement.value = '';
     }
   }
 
